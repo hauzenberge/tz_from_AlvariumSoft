@@ -18,7 +18,12 @@ Route::get('/', function () {
 });
 
 Route::prefix('/employes')->group(function () {
-    Route::get('/', 'ExportExcelController@index');
+    Route::get('/', 'EmployesController@index');
+
+    Route::get('/edit/{id}', 'EmployesController@edit');
+    Route::any('/store/{id}', 'EmployesController@store');
+
+    Route::get('/destroy/{id}', 'EmployesController@destroy');
 
     Route::get('/{id}', 'DepartamentController@users');
 });

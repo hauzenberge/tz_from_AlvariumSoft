@@ -10,10 +10,7 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class ExportExcelController extends Controller
 {
-    public function index() {
-        $users = User::all();
-        return view('welcome')->with(compact('users', $users));;
-    }
+    
     /**
      * @return \Illuminate\Support\Collection
      */
